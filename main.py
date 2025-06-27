@@ -100,7 +100,8 @@ def login_instagram():
     if INSTAGRAM_SESSION_FILE and os.path.exists(INSTAGRAM_SESSION_FILE):
         try:
             client.load_settings(INSTAGRAM_SESSION_FILE)
-            client.login(IG_USERNAME, IG_PASSWORD)  # ما زالت مطلوبة لأمان إضافي
+            # login بدون باراميتر سيستخدم الجلسة
+            client.login()
             print("✅ تم تسجيل الدخول باستخدام الجلسة.")
             return client
         except Exception as e:
@@ -155,7 +156,7 @@ def main():
     schedule.every().thursday.at("17:00").do(publish_two_posts)
     schedule.every().friday.at("17:00").do(publish_two_posts)
 
-    schedule.every().day.at("8:00").do(publish_daily_story)
+    schedule.every().day.at("08:00").do(publish_daily_story)
 
     print("⏰ السكربت يعمل الآن تلقائيًا. اضغط Ctrl+C للإيقاف.")
 
