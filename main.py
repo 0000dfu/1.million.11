@@ -144,7 +144,7 @@ def main():
 
     # جدولة النشر (بتوقيت UTC)
     schedule.every().monday.at("11:00").do(publish_two_posts)
-    schedule.every().tuesday.at(11:00").do(publish_two_posts)
+    schedule.every().tuesday.at("11:00").do(publish_two_posts)
     schedule.every().wednesday.at("11:00").do(publish_two_posts)
     schedule.every().thursday.at("11:00").do(publish_two_posts)
     schedule.every().friday.at("11:00").do(publish_two_posts)
@@ -155,7 +155,7 @@ def main():
     schedule.every().thursday.at("17:00").do(publish_two_posts)
     schedule.every().friday.at("17:00").do(publish_two_posts)
 
-    schedule.every().day.at("11:00").do(publish_daily_story)
+    schedule.every().day.at("8:00").do(publish_daily_story)
 
     print("⏰ السكربت يعمل الآن تلقائيًا. اضغط Ctrl+C للإيقاف.")
 
