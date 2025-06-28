@@ -155,7 +155,7 @@ def main():
     schedule.every().wednesday.at("17:00").do(publish_two_posts)
     schedule.every().thursday.at("17:00").do(publish_two_posts)
     schedule.every().friday.at("17:00").do(publish_two_posts)
-
+    schedule.every().day.at("17:00").do(publish_two_posts)
     schedule.every().day.at("08:00").do(publish_daily_story)
 
     print("⏰ السكربت يعمل الآن تلقائيًا. اضغط Ctrl+C للإيقاف.")
